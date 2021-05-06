@@ -65,28 +65,28 @@ tim = t.Turtle()
 
 
 ##### Ex. 5 - Draw a Spirograph
-import random
+# import random
 
 #Setting line thickness, speed and color type
-tim.speed(6)
-tim.pensize(1)
-#t.colormode()
+# tim.speed(6)
+# tim.pensize(1)
+# t.colormode(255)
 
 
-# #Function to choose a random RGB color
-def random_color():
-    r = random.randint(0, 255)
-    g = random.randint(0, 255)
-    b = random.randint(0, 255)
-    return (r, g, b)
+# # #Function to choose a random RGB color
+# def random_color():
+#     r = random.randint(0, 255)
+#     g = random.randint(0, 255)
+#     b = random.randint(0, 255)
+#     return (r, g, b)
 
-#Draw Spirograph
-for _ in range(0,351,10):
-    tim.left(_)
-    tim.color(random_color())
-    tim.circle(100)
+# #Draw Spirograph
+# for _ in range(0,351,10):
+#     tim.left(_)
+#     tim.color(random_color())
+#     tim.circle(100)
 
 
-screen = t.Screen()
-screen.exitonclick()
+# screen = t.Screen()
+# screen.exitonclick()
 
