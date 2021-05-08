@@ -14,11 +14,19 @@ screen.tracer(0)
 # Creating a snake object
 snake = snake.Snake()
 
+# Creating a screen listener to trigger movement function
+screen.listen()
+screen.onkey(snake.up, "Up")
+screen.onkey(snake.down, "Down")
+screen.onkey(snake.left, "Left")
+screen.onkey(snake.right, "Right")
+
+
 # Creating movement
 game_is_on = True
 while game_is_on:
     screen.update()
-    time.sleep(0.1)
+    time.sleep(0.05)
 
     snake.move()
 
