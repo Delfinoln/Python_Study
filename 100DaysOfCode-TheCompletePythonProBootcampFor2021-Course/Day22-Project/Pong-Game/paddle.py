@@ -1,5 +1,6 @@
 import turtle
 
+
 class Paddle(turtle.Turtle):
     def __init__(self, x_cord, y_cord):
         super().__init__()
@@ -13,9 +14,8 @@ class Paddle(turtle.Turtle):
         self.penup()
         self.goto(x=x_cord, y=y_cord)
 
-
     def move_up(self):
-        self.goto(x=self.xcor(), y=self.ycor() + 10)
+        self.goto(x=self.xcor(), y=self.ycor() + 40)
 
     def move_down(self):
-        self.goto(x=self.xcor(), y=self.ycor() - 10)
+        self.goto(x=self.xcor(), y=self.ycor() - 40)
