@@ -10,6 +10,7 @@ screen = turtle.Screen()
 # Setting up screen atributes
 screen.setup(width=600, height=600)
 screen.tracer(0)
+screen.title("Turtle Crossing")
 
 # Creating a Character
 player = character.Character()
