@@ -10,8 +10,12 @@ class Character(turtle.Turtle):
         self.setheading(90)
 
     def move(self):
-        self.forward(20)
+        if self.ycor() < 280:
+            self.forward(20)
 
     def move_down(self):
         if self.ycor() > -280:
             self.backward(20)
+
+    def reset(self):
+        self.goto(0, -280)
