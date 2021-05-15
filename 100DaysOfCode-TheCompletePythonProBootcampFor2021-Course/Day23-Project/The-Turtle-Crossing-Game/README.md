@@ -1,4 +1,4 @@
-# Turtle Race Project
+# The Turtle Crossing Game Project
 In this project, I created a Turtle Crossing Game with Python and Turtle module
 
 ## Possible result 
