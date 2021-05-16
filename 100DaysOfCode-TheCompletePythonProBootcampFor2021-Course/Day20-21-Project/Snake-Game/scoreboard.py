@@ -6,8 +6,9 @@ class Scoreboard(turtle.Turtle):
     def __init__(self):
         super().__init__()
         self.color("white")
+        with open(r"C:\Users\delfino\OneDrive\local_repository\Python_Study\100DaysOfCode-TheCompletePythonProBootcampFor2021-Course\Day20-21-Project\Snake-Game\data.txt", mode="r") as file:
+            self.high_score = int(file.read())
         self.score = 0
-        self.high_score = 0
         self.hideturtle()
         self.penup()
         self.goto(x=0, y=270)
@@ -24,6 +25,9 @@ class Scoreboard(turtle.Turtle):
     def reset(self):
         if self.score > self.high_score:
             self.high_score = self.score
+            with open(r"C:\Users\delfino\OneDrive\local_repository\Python_Study\100DaysOfCode-TheCompletePythonProBootcampFor2021-Course\Day20-21-Project\Snake-Game\data.txt", mode="w") as file:
+                file.write(str(self.high_score))
+
         self.score = 0
         self.show_score()
 
