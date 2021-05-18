@@ -18,7 +18,6 @@ screen.update()
 
 # Reading csv file with pandas
 data_frame = pd.read_csv("50_states.csv")
-print(data_frame)
 
 # Creating a writer Turtle
 writer = turtle.Turtle()
@@ -31,7 +30,8 @@ correct_states = []
 
 while game_is_on and len(correct_states) < 50:
     # Asking user
-    answer_state = screen.textinput(title=f"{len(correct_states)}/{STATES} States Correct", prompt="What's another state's name?").title()
+    answer_state = screen.textinput(title=f"{len(correct_states)}/{STATES} States Correct", prompt="What's another state's name?")
+    answer_state = answer_state.title()
 
     # Check if user's answer exists in the data frame
     if answer_state in data_frame["state"].to_list():
@@ -57,11 +57,8 @@ else:
         if state not in correct_states:
             states_missing.append(state)
 
-    # Create a dictionary of states missing and its x and y
-    states_missing_dict = {}
-    for state in states_missing:
-
-
-
+    # Create a csv file to study later
+    states_missing_csv = pd.DataFrame(states_missing)
+    states_missing_csv.to_csv("states_to_learn.csv")
 
 screen.exitonclick()
