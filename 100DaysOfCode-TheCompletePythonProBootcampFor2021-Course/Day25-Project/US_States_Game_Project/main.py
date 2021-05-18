@@ -36,6 +36,8 @@ while game_is_on and len(correct_states) < 50:
     # Check if user's answer exists in the data frame
     if answer_state in data_frame["state"].to_list():
         exists = True
+    if answer_state == "Exit":
+        break
 
     # Write on screen the name of the state
     if exists and answer_state not in correct_states:
@@ -46,7 +48,20 @@ while game_is_on and len(correct_states) < 50:
         writer.write(answer_state, align="center", font=("Courier", 8, "normal"))
         exists = False
 
-print("You got all 50 states!")
+if len(correct_states) == 50:
+    print("You got all 50 states!")
+else:
+    # Check what stats were missing
+    states_missing = []
+    for state in data_frame["state"].to_list():
+        if state not in correct_states:
+            states_missing.append(state)
+
+    # Create a dictionary of states missing and its x and y
+    states_missing_dict = {}
+    for state in states_missing:
+
+
 
 
 screen.exitonclick()
