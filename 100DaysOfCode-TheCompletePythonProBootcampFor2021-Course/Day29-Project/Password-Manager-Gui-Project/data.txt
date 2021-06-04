@@ -1,0 +1,3 @@
+teste | dummy_email@hotmail.com | teste
+novo_teste | dummy_email@hotmail.com | novo_teste
+PyPi | dummy_email@hotmail.com | 8EKvdY+k)hYE$Y1
