@@ -11,7 +11,14 @@ data_frame = pd.read_csv("nato_phonetic_alphabet.csv")
 nato_dict = {row.letter: row.code for (index, row) in data_frame.iterrows()}
 
 # Creating a list of the phonetic code words from a word that the user inputs.
-user_answer = input("Enter a word: ").upper()
-nato_list = [nato_dict[letter] for letter in user_answer]
+is_letter = True
+
+while is_letter:
+    try:
+        user_answer = input("Enter a word: ").upper()
+        nato_list = [nato_dict[letter] for letter in user_answer]
+        is_letter = False
+    except:
+        print("Sorry! Only letter in the alphabet please")
 
 print(nato_list)
